@@ -9,7 +9,7 @@ or you are Facebook legal - please don't hesitate to let me know.
 
 Looking forward for a feedback, good or bad, or ugly. Cheers.
 
-- V.
+-V.
 
 --------------------
 
