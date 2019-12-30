@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block title %}
+	- Loading...
+{% endblock %}
+
+{% block head %}
+	<meta http-equiv="refresh" content="10;url=/desktop/">
+
+	<style>
+		html, body {
+			background-color: #000000;
+		}
+
+		#logo {
+			display: block;
+			margin: auto auto;
+		}
+	</style>
+{% endblock %}
+
+{% block content %}
+	<img id="logo" src="/appmedia/logo.png" />
+{% endblock %}

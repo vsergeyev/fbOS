@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block title %}
+{% endblock %}
+
+{% block head %}
+	<style>
+		html, body {
+			background-color: #008284;
+			margin:0;
+			padding:0;
+		}
+
+		div.desktop_icon {
+			position:absolute;
+			text-align:center;
+			font: 11px arial;
+			width: 150px;
+			cursor: pointer;
+		}
+
+		div.desktop_icon p {
+			margin: 5px;
+		}
+	</style>
+
+	<link type="text/css" rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.13/themes/base/jquery-ui.css" />
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.13/jquery-ui.min.js"></script>
+
+	<script type="text/javascript">
+		$(function() {
+			var items = [
+				{'title': 'Facebook', 'icon': '/appmedia/facebook.png', 'left': '0px', 'top': '40px', 'action': 'https://facebook.com'},
+				{'title': 'Instagram', 'icon': '/appmedia/instagram.png', 'left': '0px', 'top': '160px', 'action': 'https://instagram.com'}
+			];
+
+			$.each(items, function(index, item) {
+        		var new_item = $('<div class="desktop_icon" style="left:' + item.left + '; top:' + item.top + '" onclick="window.open(\'' + item.action + '\', \'' + '_blank' + '\')"><img src="' + item.icon + '"/><p>' + item.title + '</p></div>');
+        		$("body").append(new_item);
+        	});
+		});
+	</script>
+{% endblock %}
+
+{% block content %}
+
+{% endblock %}
